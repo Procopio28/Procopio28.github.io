@@ -1,0 +1,22 @@
+button{
+    background-color: lightblue;
+    border-radius: 25px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+}
+input{
+    border-radius: 25px;
+    border: 2px solid black;
+}
