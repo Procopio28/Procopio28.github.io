@@ -32,20 +32,26 @@ document.getElementById('submitBtn').addEventListener('click', function() {
                             document.getElementById('result').innerHTML += `<br>Texture ID: ${textureId}`;
 
                             const textureUrl = `https://textures.minecraft.net/texture/${textureId}`;
-                            const imgElement = document.createElement('img');
-                            imgElement.src = textureUrl;
-                            imgElement.alt = 'Minecraft Texture';
-                            imgElement.style.width = '128px';
-                            imgElement.style.height = '128px';
-                            document.getElementById('result').appendChild(imgElement);
 
-                            const downloadButton = document.createElement('a');
-                            downloadButton.href = textureUrl;
-                            downloadButton.download = `${gamertag}_texture.png`;
-                            downloadButton.innerText = 'Download Texture';
-                            downloadButton.style.display = 'block';
-                            downloadButton.style.marginTop = '10px';
-                            document.getElementById('result').appendChild(downloadButton);
+                            // Fetch the texture image
+                            fetch(textureUrl)
+                                .then(response => response.blob())
+                                .then(blob => {
+                                    const imgElement = document.createElement('img');
+                                    imgElement.src = URL.createObjectURL(blob);
+                                    imgElement.alt = 'Minecraft Texture';
+                                    imgElement.style.width = '128px';
+                                    imgElement.style.height = '128px';
+                                    document.getElementById('result').appendChild(imgElement);
+
+                                    const downloadButton = document.createElement('a');
+                                    downloadButton.href = URL.createObjectURL(blob);
+                                    downloadButton.download = `${gamertag}_texture.png`;
+                                    downloadButton.innerText = 'Download Texture';
+                                    downloadButton.style.display = 'block';
+                                    downloadButton.style.marginTop = '10px';
+                                    document.getElementById('result').appendChild(downloadButton);
+                                });
                         } else {
                             document.getElementById('result').innerHTML += '<br>No Texture ID found.';
                         }
