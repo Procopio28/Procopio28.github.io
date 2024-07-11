@@ -1,0 +1,35 @@
+button{
+    background-color: lightblue;
+    border-radius: 25px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    border-radius: 25px;
+    border: 2px solid black;
+}
+button {
+  color: black;
+  background-color: lightblue;
+  border: none;
+  border-radius:10px; 
+  padding:3px;
+}
+body{
+  background-image: linear-gradient(white, rgb(67, 67, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
