@@ -10,11 +10,7 @@ img{
   width: 50%;
 }
 .center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-  width: 50%;
   font-family: Arial, Helvetica, sans-serif;
 }
 input{
@@ -23,13 +19,26 @@ input{
 }
 button {
   color: black;
-  background-color: lightblue;
+  background-color: seagreen;
   border: none;
   border-radius:10px; 
   padding:3px;
+}
+button:hover {
+  background-color: green;
 }
 body{
   background-image: linear-gradient(white, rgb(67, 67, 255));
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+#Transparent {
+  text-align: center;
+  background-color: rgba(35, 35, 35, 0.1);
+  box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+  border-radius: 20px;
+  padding: 10px;
+}
+#result {
+  border: 1px;
 }
